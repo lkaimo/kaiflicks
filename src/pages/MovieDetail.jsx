@@ -39,7 +39,7 @@ export default function MovieDetail({ movieId, onBack, onSelect }) {
     document.title = `${movie.title} (${movie.year})`;
     const favicon = document.querySelector("link[rel='icon']") || document.createElement("link");
     favicon.rel  = "icon";
-    favicon.href = movie.medium_cover_image || "/public/kaiflicks-icon.png";
+    favicon.href = movie.medium_cover_image || "/kaiflicks-icon.png";
     if (!document.querySelector("link[rel='icon']")) {
       document.head.appendChild(favicon);
     }

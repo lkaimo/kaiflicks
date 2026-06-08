@@ -165,7 +165,7 @@ export default function Dashboard({ onBrowse, onSelectMovie }) {
       {/* ── Hero ── */}
       <div style={DS.hero}>
         <img
-          src="/public/kaiflicks_logo.png"
+          src="/kaiflicks_logo.png"
           alt="KaiFlicks"
           style={{ maxWidth: "400px", height: "auto", marginBottom: "16px" }}
         />

@@ -70,7 +70,7 @@ export default function BrowsePage({ onSelectMovie, onGoToDashboard }) {
     document.title = "Search and Browse Movies";
     const favicon = document.querySelector("link[rel='icon']") || document.createElement("link");
     favicon.rel  = "icon";
-    favicon.href = "/public/kaiflicks-icon.png";
+    favicon.href = "/kaiflicks-icon.png";
     if (!document.querySelector("link[rel='icon']")) {
       document.head.appendChild(favicon);
     }
