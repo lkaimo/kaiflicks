@@ -125,7 +125,7 @@ export default function BrowsePage({ onSelectMovie, onGoToDashboard }) {
       <div style={S.header}>
         <img
           onClick={onGoToDashboard}
-          src="/public/kaiflicks-icon.png"
+          src="/kaiflicks-icon.png"
           alt="KaiFlicks"
           style={{ cursor: "pointer", width: "40px", height: "auto" }}
         />
