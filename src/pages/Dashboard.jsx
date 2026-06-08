@@ -153,7 +153,7 @@ export default function Dashboard({ onBrowse, onSelectMovie }) {
     document.title = "Kaiflicks: Your Digital Movie Hub";
     const favicon = document.querySelector("link[rel='icon']") || document.createElement("link");
     favicon.rel  = "icon";
-    favicon.href = "/public/kaiflicks-icon.png";
+    favicon.href = "/kaiflicks-icon.png";
     if (!document.querySelector("link[rel='icon']")) {
       document.head.appendChild(favicon);
     }
