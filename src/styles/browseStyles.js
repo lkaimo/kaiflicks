@@ -29,7 +29,7 @@ const S = {
   },
   header:  { display: "flex", alignItems: "center", gap: "12px", marginBottom: "20px", flexWrap: "wrap" },
   logo:    { fontSize: "32px" },
-  title:   { fontSize: "28px", fontWeight: "800", margin: 0, flex: 1 },
+  title:   { fontSize: "28px", fontWeight: "800", margin: 0, flex: 1, color: 'white' },
   count:   { fontSize: "13px", color: "#888" },
 
   // ── Search Bar ──
