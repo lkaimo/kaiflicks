@@ -103,7 +103,7 @@ export default function MovieDetail({ movieId, onBack, onSelect }) {
 
           {/* Info column */}
           <div style={S.infoCol}>
-            <h1 style={S.detailTitle}>{movie.title}</h1>
+            <h1 style={S.detailTitle, color: 'white'}>{movie.title}</h1>
 
             {/* Meta badges */}
             <div style={S.metaRow}>
