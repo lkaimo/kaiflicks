@@ -146,7 +146,7 @@ const S = {
   downloadBtn: { display: "block", textAlign: "center", backgroundColor: "#2ecc40", color: "#fff", padding: "12px", borderRadius: "8px", fontWeight: "700", fontSize: "15px", textDecoration: "none" },
 
   infoCol:     { flex: 1, minWidth: "280px" },
-  detailTitle: { fontSize: "36px", fontWeight: "900", margin: "0 0 10px 0", lineHeight: 1.1 },
+  detailTitle: { fontSize: "36px", fontWeight: "900", margin: "0 0 10px 0", color: 'white', lineHeight: 1.1 },
 
   metaRow:   { display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "10px", alignItems: "center", justifyContent: "center" },
   yearBadge: { backgroundColor: "#e50914", color: "#fff", padding: "3px 10px", borderRadius: "4px", fontSize: "14px", fontWeight: "700" },
