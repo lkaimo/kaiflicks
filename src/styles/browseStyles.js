@@ -143,6 +143,15 @@ const S = {
   detailTop:   { display: "flex", gap: "32px", padding: "24px 0", flexWrap: "wrap", alignItems: "flex-start", justifyContent: "center" },
   posterCol:   { flexShrink: 0, display: "flex", flexDirection: "column", gap: "12px", alignItems: "center" },
   detailPoster: { width: "220px", borderRadius: "12px", boxShadow: "0 8px 32px rgba(0,0,0,0.7)" },
+  watchBtn: {
+    display: "block", textAlign: "center", width: "220px", boxSizing: "border-box",
+    backgroundColor: "#e50914", color: "#fff",
+    padding: "11px 0", borderRadius: "8px",
+    fontWeight: "700", fontSize: "15px",
+    textDecoration: "none", letterSpacing: "0.5px",
+    boxShadow: "0 4px 16px rgba(229,9,20,0.45)",
+    transition: "background-color 0.2s, box-shadow 0.2s",
+  },
   downloadBtn: { display: "block", textAlign: "center", backgroundColor: "#2ecc40", color: "#fff", padding: "12px", borderRadius: "8px", fontWeight: "700", fontSize: "15px", textDecoration: "none" },
 
   infoCol:     { flex: 1, minWidth: "280px" },

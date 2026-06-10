@@ -99,6 +99,16 @@ export default function MovieDetail({ movieId, onBack, onSelect }) {
               style={S.detailPoster}
               onError={e => (e.target.style.opacity = 0)}
             />
+            {movie.imdb_code && (
+              <a
+                href={`https://vidsrc.to/embed/movie/${movie.imdb_code}`}
+                target="_blank"
+                rel="noreferrer"
+                style={S.watchBtn}
+              >
+                ▶ Watch
+              </a>
+            )}
           </div>
 
           {/* Info column */}
