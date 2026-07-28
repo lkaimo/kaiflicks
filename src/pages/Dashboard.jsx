@@ -218,7 +218,7 @@ export default function Dashboard({ onBrowse, onSelectMovie }) {
       <MovieRow title="Top 10 Most Downloaded" sortBy="download_count"       onSelect={onSelectMovie} onFirstMovie={setTopDownloaded} />
       <MovieRow title="Top 10 Highest Rated"   sortBy="rating" minRating="7" onSelect={onSelectMovie} />
       <MovieRow title="Top 10 Most Liked"      sortBy="like_count"           onSelect={onSelectMovie} onFirstMovie={setTopLiked} />
-      <MovieRow title="Newest Releases"        sortBy="date_added"           onSelect={onSelectMovie} onFirstMovie={setNewestMovie} />
+      <MovieRow title="Newest Uploads"        sortBy="date_added"           onSelect={onSelectMovie} onFirstMovie={setNewestMovie} />
       <DailyPicksRow onSelect={onSelectMovie} />
 
       <div style={{ padding: "40px 32px", textAlign: "center" }}>
