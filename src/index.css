@@ -50,20 +50,30 @@
   }
 }
 
+html,
 body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #0a0a0a; /* removes the white strip on the right */
 }
 
 #root {
-  width: 1126px;
+  width: 100%;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
-  border-inline: 1px solid var(--border);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  /* border-inline removed (was the gray left/right border) */
+}
+
+#root > * {
+  min-width: 0;
 }
 
 h1,
@@ -108,4 +118,43 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+/* ── Mobile layout (landing page) ── */
+@media (max-width: 640px) {
+  .kf-hero {
+    padding: 40px 16px 32px !important;
+  }
+
+  /* 2x2 grid for stat cards instead of 4 tall stacked boxes */
+  .kf-stats {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px !important;
+    width: 100%;
+    margin-bottom: 28px !important;
+  }
+
+  .kf-stat-card {
+    min-width: 0 !important;
+    padding: 14px 10px !important;
+  }
+
+  .kf-row {
+    padding: 28px 12px 0 !important;
+  }
+
+  /* Genre pills scroll sideways instead of wrapping into many rows */
+  .kf-genres {
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    justify-content: flex-start !important;
+    scrollbar-width: none;
+  }
+  .kf-genres::-webkit-scrollbar {
+    display: none;
+  }
+  .kf-genres button {
+    flex-shrink: 0;
+  }
 }

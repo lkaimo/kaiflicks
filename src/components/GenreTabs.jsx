@@ -6,7 +6,7 @@ import DS from "../styles/dashboardStyles";
 // ─────────────────────────────────────────
 export default function GenreTabs({ active, onChange }) {
   return (
-    <div style={DS.genreTabs}>
+    <div style={DS.genreTabs} className="kf-genres">
       {ALL_GENRES.map(g => (
         <button
           key={g}

@@ -59,7 +59,7 @@ function MovieRow({ title, sortBy, minRating = "", onSelect, onFirstMovie }) {
   }, [genre, sortBy, minRating]);
 
   return (
-    <div style={DS.rowSection}>
+    <div style={DS.rowSection} className="kf-row">
       <h2 style={DS.rowTitle}>
         <img src="/kaiflicks-icon.png" alt="" style={DS.rowIcon} />
         {title}
@@ -104,7 +104,7 @@ function DailyPicksRow({ onSelect }) {
   }, []);
 
   return (
-    <div style={DS.rowSection}>
+    <div style={DS.rowSection} className="kf-row">
       <div style={DS.picksHeader}>
         <h2 style={DS.rowTitle}>
           <img src="/kaiflicks-icon.png" alt="" style={DS.rowIcon} />
@@ -163,16 +163,16 @@ export default function Dashboard({ onBrowse, onSelectMovie }) {
     <div style={DS.page}>
 
       {/* ── Hero ── */}
-      <div style={DS.hero}>
+      <div style={DS.hero} className="kf-hero">
         <img
           src="/kaiflicks_logo.png"
           alt="KaiFlicks"
-          style={{ maxWidth: "400px", height: "auto", marginBottom: "16px" }}
+          style={{ width: "100%", maxWidth: "400px", height: "auto", marginBottom: "16px" }}
         />
 
         {/* Stat cards */}
-        <div style={DS.statsRow}>
-          <div style={DS.statCard}>
+        <div style={DS.statsRow} className="kf-stats">
+          <div style={DS.statCard} className="kf-stat-card">
             {loading
               ? <span style={{ color: "#555" }}>—</span>
               : <span style={DS.statNum}>{totalMovies.toLocaleString()}</span>
@@ -181,6 +181,7 @@ export default function Dashboard({ onBrowse, onSelectMovie }) {
           </div>
 
           <div
+            className="kf-stat-card"
             onClick={() => topDownloaded && onSelectMovie(topDownloaded.id)}
             style={{ ...DS.statCard, cursor: topDownloaded ? "pointer" : "default" }}
           >
@@ -191,6 +192,7 @@ export default function Dashboard({ onBrowse, onSelectMovie }) {
           </div>
 
           <div
+            className="kf-stat-card"
             onClick={() => topLiked && onSelectMovie(topLiked.id)}
             style={{ ...DS.statCard, cursor: topLiked ? "pointer" : "default" }}
           >
@@ -201,6 +203,7 @@ export default function Dashboard({ onBrowse, onSelectMovie }) {
           </div>
 
           <div
+            className="kf-stat-card"
             onClick={() => newestMovie && onSelectMovie(newestMovie.id)}
             style={{ ...DS.statCard, cursor: newestMovie ? "pointer" : "default" }}
           >
@@ -218,7 +221,7 @@ export default function Dashboard({ onBrowse, onSelectMovie }) {
       <MovieRow title="Top 10 Most Downloaded" sortBy="download_count"       onSelect={onSelectMovie} onFirstMovie={setTopDownloaded} />
       <MovieRow title="Top 10 Highest Rated"   sortBy="rating" minRating="7" onSelect={onSelectMovie} />
       <MovieRow title="Top 10 Most Liked"      sortBy="like_count"           onSelect={onSelectMovie} onFirstMovie={setTopLiked} />
-      <MovieRow title="Newest Uploads"        sortBy="date_added"           onSelect={onSelectMovie} onFirstMovie={setNewestMovie} />
+      <MovieRow title="Newest Uploads"         sortBy="date_added"           onSelect={onSelectMovie} onFirstMovie={setNewestMovie} />
       <DailyPicksRow onSelect={onSelectMovie} />
 
       <div style={{ padding: "40px 32px", textAlign: "center" }}>
