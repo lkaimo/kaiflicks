@@ -101,7 +101,7 @@ export default function MovieDetail({ movieId, onBack, onSelect }) {
             />
             {movie.imdb_code && (
               <a
-                href={`https://vidsrc.to/embed/movie/${movie.imdb_code}`}
+                href={`https://cinesrc.st/embed/movie/${movie.imdb_code}`}
                 target="_blank"
                 rel="noreferrer"
                 style={S.watchBtn}
